@@ -18,14 +18,15 @@ using namespace std;
 // clang++ -std=c++11 -stdlib=libc++ general.cpp
 // ./a.out
 
+//returns left-most insertion point
 int binarySearch(int goal,int arr[], int size){
-   int low = 0, high = size, mid;
-   while (low + 1 < high) {
-      mid = (low + high - 1) / 2;
-      if (arr[mid] < goal) 
-         low = mid + 1;
+   int low = 0, high = size-1, mid;
+   while (low <= high) {
+      mid = (low + high) / 2;
+      if (arr[mid] >= goal) 
+         high = mid - 1;
       else
-         high = mid + 1;
+         low = mid + 1;
    }
    return low;
 }
