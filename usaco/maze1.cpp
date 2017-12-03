@@ -50,6 +50,7 @@ void bfs(pair<int, int> start, int marked[210][80]){
             q.push(make_pair(p.first+1, make_pair(r+moveR[i], c+moveC[i])));
    }
 }
+
 int main(){
    // freopen("in.txt", "r", stdin);
    freopen("maze1.in", "r", stdin);
