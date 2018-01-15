@@ -30,6 +30,7 @@ int binarySearch(int goal,int arr[], int size){
    }
    return low;
 }
+
 int main(){
    freopen("in.txt", "r", stdin);
    // freopen("geteven.in", "r", stdin);
